@@ -154,11 +154,6 @@ const WriteLetter: React.FC = () => {
     ],
   };
 
-  const heightAnimated = translateY.interpolate({
-    inputRange: [0, 100],
-    outputRange: [0, 100],
-  });
-
   const onMessage = useCallback(
     (event: {nativeEvent: {data?: string}}) => {
       console.log('receive message', event.nativeEvent.data);
@@ -239,7 +234,7 @@ const WriteLetter: React.FC = () => {
           {
             flex: 1,
           },
-          //   mainStyle,
+          mainStyle,
         ]}>
         <WebView
           ref={webviewRef}
